@@ -104,10 +104,12 @@ footer {
     padding: 30px 0;
 
 }
-footer .footer-container{
+
+footer .footer-container {
     display: flex;
-    flex-flow: column;
-    justify-content: space-around;
+    flex-flow: row;
+/*    justify-content: space-around;*/
+    width: 100%;
 }
 
 footer ul {
@@ -135,16 +137,26 @@ footer i {
 
 footer a {
     color: white;
-    text-decoration: none;
     cursor: pointer;
     padding: 0;
     margin-bottom: 0;
     margin-top: 0;
 }
-footer .news ul li{
+
+footer .news ul li {
     flex-flow: column;
+        align-items: baseline;
+
 }
-footer h3{
+footer .links{
+/*    width: 30%;*/
+    margin-left: 40px;
+}
+footer .news,.contact{
+    width: 40%;
+}
+
+footer h3 {
     font-weight: 700;
 }
 
@@ -153,7 +165,7 @@ footer h3{
 
 /*Navigation Part*/
 
-.top-nav{
+.top-nav {
     background-color: darkslategray;
 }
 
@@ -171,7 +183,7 @@ header ul {
 header ul li {
     display: inline-block;
     float: left;
-/*    margin-right: 1px;*/
+    /*    margin-right: 1px;*/
     background-color: darkslategray;
 }
 
@@ -180,7 +192,7 @@ header ul li.right {
 }
 
 header ul li a:hover:not(.active) {
-   background-color: #3f6868;
+    background-color: #3f6868;
     color: black;
 }
 
@@ -212,7 +224,7 @@ header ul li.right a {
 
 
 header li:hover ul li a {
-     min-width: 130px;
+    min-width: 130px;
     height: 40px;
     line-height: 40px;
 
@@ -271,13 +283,13 @@ label:hover {
 
 
 
-@media screen and (min-width: 760px) {
-header ul {
+@media screen and (max-width: 760px) {
+    header ul {
         position: static;
         display: none;
     }
 
-header li {
+    header li {
         margin-bottom: 1px;
     }
 
@@ -290,15 +302,31 @@ header li {
         display: block;
     }
 
-header ul li a:hover + .hidden,
+    header ul li a:hover + .hidden,
     .hidden:hover {
         display: block;
         position: relative;
 
     }
-    .right{
+
+    .right {
         display: none;
     }
+
+    footer ul {
+    justify-content: space-between;
+    flex-flow: column;
+    height: 150px;
+}
+    footer .footer-container {
+    flex-flow: column;
+
+}
+    footer .news,.contact{
+    width: auto;
+}
+
+
 
 
 }
@@ -307,7 +335,7 @@ header ul li a:hover + .hidden,
 
 /*thumbnail*/
 
-.thumbnail{
+.thumbnail {
     position: relative;
     background-image: url("https://images.unsplash.com/photo-1545647274-96644da34363?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1903&q=80");
     background-size: cover;
@@ -316,7 +344,8 @@ header ul li a:hover + .hidden,
     min-height: 50vh;
     filter: saturate(40%);
 }
-.intro{
+
+.intro {
     position: absolute;
     padding: 1em;
     top: 1em;
@@ -344,3 +373,4 @@ header ul li a:hover + .hidden,
     background-size: 100% 100%;
     border: 2px solid #2f4f4f;
 }
+
