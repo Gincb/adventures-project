@@ -51,10 +51,20 @@ footer .news ul li{
 footer h3{
     font-weight: 700;
 }
+
+
+
+
+
+/*Navigation Part*/
+
 .top-nav{
     background-color: darkslategray;
 }
-ul {
+
+
+
+header ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -63,24 +73,24 @@ ul {
 
 }
 
-ul li {
+header ul li {
     display: inline-block;
     float: left;
 /*    margin-right: 1px;*/
     background-color: darkslategray;
 }
 
-ul li.right {
+header ul li.right {
     float: right;
 }
 
-ul li a:hover:not(.active) {
+header ul li a:hover:not(.active) {
    background-color: lightgray;
     color: black;
 }
 
 
-ul li a.active {
+header ul li a.active {
     background-color: lightgray;
     color: black;
 
@@ -89,7 +99,7 @@ ul li a.active {
 
 
 
-li a {
+header li a {
     display: block;
     min-width: 140px;
     height: 50px;
@@ -100,35 +110,39 @@ li a {
     text-decoration: none;
 }
 
+header ul li.right a {
+    float: right;
+    min-width: 30px;
+}
 
 
-li:hover ul li a {
+header li:hover ul li a {
      min-width: 130px;
     height: 40px;
     line-height: 40px;
 
 }
 
-li:hover ul li a:hover {
+header li:hover ul li a:hover {
     color: black;
 }
 
-li ul {
+header li ul {
     display: none;
 }
 
-li ul li {
+header li ul li {
     display: block;
     float: none;
 }
 
-li ul li a {
+header li ul li a {
     min-width: 100px;
     padding: 0px 5px;
 }
 
 
-ul li a:hover + .hidden,
+header ul li a:hover + .hidden,
 .hidden:hover {
     display: block;
     position: absolute;
@@ -163,16 +177,16 @@ label:hover {
 
 
 @media screen and (max-width: 760px) {
-    ul {
+header ul {
         position: static;
         display: none;
     }
 
-    li {
+header li {
         margin-bottom: 1px;
     }
 
-    ul li,
+    header ul li,
     li a {
         width: 100%
     }
@@ -181,7 +195,7 @@ label:hover {
         display: block;
     }
 
-    ul li a:hover + .hidden,
+header ul li a:hover + .hidden,
     .hidden:hover {
         display: block;
         position: relative;
@@ -190,5 +204,5 @@ label:hover {
     .right{
         display: none;
     }
->>>>>>> origin/master
+
 }
