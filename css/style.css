@@ -20,19 +20,23 @@ body {
 }
 
 .container {
-    margin: 0 10em;
+    margin: 0 1em;
 }
 
 .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin-bottom: 5em;
     border: 1px solid #e1e1e1;
-    height: 366px;
+    min-height: 366px;
+    max-width: 90vw;
 }
 
 .card-image {
-    width: 600px;
+    max-width: 90vw;
     height: 366px;
-    float: left;
+    /* float: left; */
     padding-right: 50px;
 }
 
