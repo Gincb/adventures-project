@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.card-header {
+    margin: auto;
+    text-align: center;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: auto 45vw 45vw auto;
+    grid-template-rows: 14vh 14vh 14vh;
+    grid-template-areas: ". cardimg cardtitle ." ". cardimg cardcontent ." ". cardimg cardbutton .";
+}
+
+.card-image {
+    grid-area: cardimg;
+}
+
+.card-title {
+    grid-area: cardtitle;
+}
+
+.card-description {
+    grid-area: cardcontent;
+}
+
+.card-button {
+    grid-area: cardbutton;
+}
