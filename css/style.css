@@ -30,6 +30,8 @@ body {
 }
 
 .card-image {
+    width: 600px;
+    height: 366px;
     float: left;
     padding-right: 50px;
 }
