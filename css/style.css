@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    font-family: montserrat, sans-serif, Arial, sans-serif;
+
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: darkslategrey;
+    color: white;
+    text-align: center;
+}
+
+footer ul {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+    height: 150px;
+}
+
+footer li {
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+
+}
+
+footer i {
+    color: #90caf9;
+    margin-right: 50px;
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+footer .news ul li{
+    flex-flow: column;
+}
+footer h3{
+    font-weight: 700;
+}
