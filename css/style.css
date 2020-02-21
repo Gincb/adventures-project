@@ -371,8 +371,6 @@ label:hover {
 
 
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -381,7 +379,7 @@ label:hover {
 
 .thumbnail {
     position: relative;
-    background-image: url("https://images.unsplash.com/photo-1545647274-96644da34363?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1903&q=80");
+    background-image: url("https://images.unsplash.com/photo-1508672019048-805c876b67e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1993&q=80");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right;
@@ -531,68 +529,6 @@ label:hover {
         display: none;
     }
 
-    footer ul {
-    justify-content: space-between;
-    flex-flow: column;
-    height: 150px;
-}
-    footer .footer-container {
-    flex-flow: column;
-
-}
-    footer .news,.contact{
-    width: auto;
-}
-
-    .introGallery{
-    flex-flow: column;
-    justify-content: center;
-        align-items: center;
-         margin-top: 1em;
-
-
-}
->>>>>>> origin/master
-
-
-
-    .firstImage, .secondImage, .thirdImage {
-        margin: 1em;
-        width: 70vw;
-    }
-
-
-<<<<<<< HEAD
-@media screen and (max-width: 760px) {
-    header ul {
-        position: static;
-        display: none;
-    }
-
-    header li {
-        margin-bottom: 1px;
-    }
-
-    header ul li,
-    li a {
-        width: 100%
-    }
-
-    .show-menu {
-        display: block;
-    }
-
-    header ul li a:hover + .hidden,
-    .hidden:hover {
-        display: block;
-        position: relative;
-
-    }
-
-    .right {
-        display: none;
-    }
-
     .team > .team-container {
 
         flex-flow: column;
@@ -605,7 +541,6 @@ label:hover {
 
     }
 
-
     .team .member-img {
         margin-left: 9vw;
 
@@ -615,29 +550,32 @@ label:hover {
         height: 28vw;
         width: 28vw;
 
-
-
     }
 
     footer ul {
-        justify-content: space-between;
-        flex-flow: column;
-        height: 150px;
+    justify-content: space-between;
+    flex-flow: column;
+    height: 150px;
     }
-
     footer .footer-container {
-        flex-flow: column;
+    flex-flow: column;
+
+    }
+    footer .news,.contact{
+    width: auto;
+    }
+
+    .introGallery{
+    flex-flow: column;
+    justify-content: center;
+        align-items: center;
+         margin-top: 1em;
+
 
     }
 
-    footer .news,
-    .contact {
-        width: auto;
+    .firstImage, .secondImage, .thirdImage {
+        margin: 1em;
+        width: 70vw;
     }
-
-
-
-
-=======
->>>>>>> origin/master
 }
