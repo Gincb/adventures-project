@@ -21,13 +21,10 @@ body {
 }
 
 .container {
-    margin: 0 1em;
+    margin: 0 3em;
 }
 
 .cards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     margin-bottom: 5em;
     border: 1px solid #e1e1e1;
     min-height: 366px;
@@ -35,14 +32,26 @@ body {
 }
 
 .card-image {
-    max-width: 90vw;
-    height: 366px;
-    /* float: left; */
+    background-image: url("https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+    background-size: cover;
+    background-position: center;
+    min-width: 50vw;
+    min-height: 366px;
+    margin-right: 1em;
+    float: left;
+}
+
+.card-image2 {
+    background-image: url("https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80");
 }
 
 .card-content {
-    padding: 30px 50px;
+    padding: 1em;
     position: relative;
+}
+
+.card-title {
+    margin: 1.7em 0 0;
 }
 
 .card-reviews {
@@ -54,12 +63,13 @@ body {
 }
 
 .card-description {
-    padding-bottom: 1em;
+    margin: 0 0 1em 0;
+    padding-bottom: 0.5em;
     color: #9b9b9b;
 }
 
 .card-button {
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
@@ -341,10 +351,13 @@ label:hover {
 
 
 
+<<<<<<< HEAD
+=======
 
 
 
-/*thumbnail*/
+
+/*thumbnail of main picture on the top*/
 
 .thumbnail {
     position: relative;
@@ -385,6 +398,163 @@ label:hover {
     border: 2px solid #2f4f4f;
 }
 
+
+
+/*introGallery with three pictures on top*/
+.introGallery{
+
+    display:flex;
+/*    min-width: 100vw;*/
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: -2em;
+    flex-flow: row;
+}
+
+.firstImage {
+    position: relative;
+    background-image: url("https://images.unsplash.com/photo-1568751302450-3d84e00f2348?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+   height: 50vh;
+/*    filter: saturate(40%);*/
+    min-width: 20vw;
+}
+
+
+.secondImage {
+    position: relative;
+    background-image: url("https://images.unsplash.com/photo-1523866098101-26d61edaae51?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 50vh;
+/*    filter: saturate(40%);*/
+    min-width: 20vw;
+}
+
+.thirdImage {
+    position: relative;
+    background-image: url("https://images.unsplash.com/photo-1505957809694-3e65d3c204b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+   height: 50vh;
+/*    filter: saturate(40%);*/
+     min-width: 20vw;
+}
+
+.ImageText {
+    position: absolute;
+    padding: 1em;
+    bottom: 1em;
+    left: 1em;
+    color: #fff;
+}
+
+.introGallery a:hover{
+    transition: transform 0.3s;
+    transform: scale(1.02)
+}
+
+@media screen and (max-width: 760px) {
+    .cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 5em;
+        border: 1px solid #e1e1e1;
+        min-height: 366px;
+        max-width: 90vw;
+    }
+
+    .card-image {
+        padding: 0;
+        margin: 0;
+        width: 100vw;
+        float: none;
+    }
+
+    .container {
+        margin: 0 1em;
+    }
+
+    header ul {
+        position: static;
+        display: none;
+    }
+
+    header li {
+        margin-bottom: 1px;
+    }
+
+    header ul li,
+    li a {
+        width: 100%
+    }
+
+    .show-menu {
+        display: block;
+    }
+
+    header ul li a:hover + .hidden,
+    .hidden:hover {
+        display: block;
+        position: relative;
+
+    }
+
+    .right {
+        display: none;
+    }
+
+    footer ul {
+    justify-content: space-between;
+    flex-flow: column;
+    height: 150px;
+}
+    footer .footer-container {
+    flex-flow: column;
+
+}
+    footer .news,.contact{
+    width: auto;
+}
+
+    .introGallery{
+    flex-flow: column;
+    justify-content: center;
+        align-items: center;
+         margin-top: 1em;
+
+
+}
+>>>>>>> origin/master
+
+
+
+/*thumbnail*/
+
+.thumbnail {
+    position: relative;
+    background-image: url("https://images.unsplash.com/photo-1508672019048-805c876b67e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1993&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    min-height: 50vh;
+    filter: saturate(40%);
+
+}
+
+    .firstImage, .secondImage, .thirdImage {
+        margin: 1em;
+        width: 70vw;
+    }
+
+
+<<<<<<< HEAD
 @media screen and (max-width: 760px) {
     header ul {
         position: static;
@@ -460,4 +630,6 @@ label:hover {
 
 
 
+=======
+>>>>>>> origin/master
 }
