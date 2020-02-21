@@ -184,12 +184,14 @@ footer ul {
     justify-content: space-between;
     flex-flow: column;
     height: 150px;
+    list-style: circle;
 }
 
 footer li {
     list-style: none;
     display: flex;
     align-items: baseline;
+
 
 }
 
@@ -207,14 +209,25 @@ footer a {
     padding: 0;
     margin-bottom: 0;
     margin-top: 0;
+    transition: .3s;
+}
+footer a:hover{
+    color: #60a1d6;
 }
 
 footer .news ul li {
     flex-flow: column;
     align-items: baseline;
+        transition: .3s;
+
 
 }
+footer .news ul li:hover {
 
+    color: #60a1d6;
+
+
+}
 footer .links {
     margin-left: 40px;
 }
@@ -222,6 +235,13 @@ footer .links {
 footer .news,
 .contact {
     width: 40%;
+}
+footer .news li span{
+    color: #60a1d6;
+    font-style: italic;
+}
+footer .news li{
+   cursor: pointer;
 }
 
 footer h3 {
