@@ -11,13 +11,18 @@ body {
     font-size: 1em;
     color: rgb(255, 217, 0);
 }
+article h1{
+    margin: 100px;
+}
 
 .card-header {
-    padding: 1em;
-    font-size: 1.5em;
+    padding-bottom: 2em;
+    padding-top: 3em;
+    font-size: 2em;
     line-height: 1.2;
     margin: auto;
     text-align: center;
+    letter-spacing: 8px;
 }
 
 .container {
@@ -76,13 +81,14 @@ body {
     border: 2px solid #2c2c2c;
     background-color: white;
     background-image: linear-gradient(#2f4f4f, #2f4f4f);
-    background-position: 50% 50%;
+/*    background-position: 50% 50%;*/
     background-repeat: no-repeat;
     background-size: 0% 100%;
     transition: background-size .5s, color .5s;
 }
 
 .card-button:hover {
+
     background-size: 100% 100%;
     color: #fff;
     border: 2px solid #2f4f4f;
@@ -107,12 +113,18 @@ body {
 /************ team **********/
 
 .team h1 {
+    padding-bottom: 1em;
+    padding-top: 2.5em;
+    font-size: 2em;
+    line-height: 1.2;
+    margin: auto;
     text-align: center;
+    letter-spacing: 8px;
 }
 
 .team > .team-container {
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     justify-content: center;
     align-content: stretch;
     flex-flow: row;
@@ -423,7 +435,6 @@ label:hover {
     color: #fff;
     background-color: transparent;
     background-image: linear-gradient(#2f4f4f, #2f4f4f);
-    background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: 0% 100%;
     transition: background-size .5s, color .5s;
@@ -431,7 +442,6 @@ label:hover {
 
 .intro-button:hover {
     background-size: 100% 100%;
-    border: 2px solid #2f4f4f;
 }
 
 
@@ -450,7 +460,7 @@ label:hover {
 
 .firstImage {
     position: relative;
-    background-image: url("https://images.unsplash.com/photo-1568751302450-3d84e00f2348?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80");
+    background-image: url("https://image.jimcdn.com/app/cms/image/transf/none/path/sa6549607c78f5c11/image/i44ded034dcffa32d/version/1548338391/florence-tourism-italy-best-destinations-in-europe.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
