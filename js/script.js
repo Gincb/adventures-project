@@ -24,17 +24,19 @@ function handleData(data) {
     const beachBtn = document.getElementById("beach");
     beachBtn.addEventListener("click", filterContent);
 
-
+    myData.forEach(showData);
 
     function filterContent(e) {
-        console.log(e.target.id, "element id")
-        console.log(myData, "data")
-        let result = myData.filter(item => item.gsx$category.$t === e.target.id);
-        console.log(result, "res array")
+       
+        
+        let result = myData.filter(item => item.gsx$category.$t === e.currentTarget.id);
+       // console.log(result, "res array")
+        document.querySelector(".container").innerHTML = "";
             result.forEach(showData);
+        }
 
 
-    }
+  
 
 }
 
