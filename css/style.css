@@ -50,12 +50,8 @@ body {
     margin: 1.7em 0 0;
 }
 
-.card-reviews {
-    display: inline-block;
-    padding-left: 1em;
-    font-size: 0.8em;
-    font-weight: bold;
-    color: #9b9b9b;
+.rating {
+    padding: 1em 0;
 }
 
 .card-description {
