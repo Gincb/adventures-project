@@ -18,8 +18,10 @@ function handleData(data) {
 
     const cityBtn = document.getElementById("City(sightseeing)");
     cityBtn.addEventListener("click", filterContent);
+    
     const mountainBtn = document.getElementById("mountain");
     mountainBtn.addEventListener("click", filterContent);
+
 
     const beachBtn = document.getElementById("beach");
     beachBtn.addEventListener("click", filterContent);
@@ -27,17 +29,13 @@ function handleData(data) {
     myData.forEach(showData);
 
     function filterContent(e) {
-       
+        document.querySelector(".card-header").textContent = e.currentTarget.querySelector("h2").textContent;
         
         let result = myData.filter(item => item.gsx$category.$t === e.currentTarget.id);
        // console.log(result, "res array")
         document.querySelector(".container").innerHTML = "";
             result.forEach(showData);
         }
-
-
-  
-
 }
 
 function showData(singleRowData) {
