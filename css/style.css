@@ -142,23 +142,41 @@ body {
 }
 
 .team .member-img {
-    border-radius: 50%;
     position: relative;
     z-index: 100;
     margin-bottom: -50px;
     margin-left: 18%;
-
-}
-
-.team .member-img img {
-    height: 13vw;
+     height: 13vw;
     width: 13vw;
     border-radius: 50%;
     border: 12px white solid;
 
+}
+.team  .nitzan {
+  background-image: url("../media/nitzan.JPG");
+      background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.team  .daniel {
+  background-image: url("../media/daniel.jpg");
+      background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.team  .gintare {
+  background-image: url("https://scontent-cph2-1.xx.fbcdn.net/v/t31.0-8/s960x960/12898206_1400246426669214_8028756538378271773_o.jpg?_nc_cat=105&_nc_ohc=WfkazL2BptAAX-vZ8lf&_nc_ht=scontent-cph2-1.xx&_nc_tp=7&oh=a1fc80ba0c8fd74c4531c107d7d85eef&oe=5EB90864");
+    background-size: cover;
+        background-position: 100% 20% ;
+        background-repeat: no-repeat;
+
 
 
 }
+
+
 
 /************ footer **********/
 
@@ -542,13 +560,13 @@ label:hover {
     }
 
     .team .member-img {
-        margin-left: 9vw;
+        margin-left: 8vw;
 
     }
 
-    .team .member-img img {
-        height: 28vw;
-        width: 28vw;
+    .team .member-img {
+        height: 30vw;
+        width: 30vw;
 
     }
 
