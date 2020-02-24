@@ -493,7 +493,7 @@ label:hover {
     text-align: center;
 }
 
-.introGallery a:hover{
+.introGallery div:hover{
     transition: transform ease-out 0.3s;
     transform: scale(1.02)
 }
