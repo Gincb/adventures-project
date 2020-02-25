@@ -46,6 +46,35 @@ function handleData(data) {
         document.querySelector(".container").innerHTML = "";
             result.forEach(showData);
         }
+
+    function sortList(sortType){
+        console.log(sortType)
+        if (sortType === "price"){
+            myData.sort( function(a,b){
+                return a.gsx$price.$t - b.gsx$price.$t;
+                console.log(a, b)
+            })
+        }else if (sortType === "rate"){
+            myData.sort( function(a,b){
+                return a.gsx$rating.$t - b.gsx$rating.$t;
+        })
+        }
+    }
+
+    const submit = document.getElementById("submitBtn");
+
+
+submit.addEventListener("click", select)
+function select(){
+    const options = document.querySelectorAll("option");
+options.forEach( option=>{
+
+    if (option.selected){
+        sortList(option.id)
+    }
+})
+}
+
 }
 
 function showData(singleRowData) {
@@ -80,3 +109,13 @@ function showData(singleRowData) {
     place.appendChild(myClone);
 
 }
+
+
+
+
+
+
+
+
+
+

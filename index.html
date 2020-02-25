@@ -21,16 +21,31 @@
             <ul id="menu">
 
                 <li><a class="active" href="index.html">Home</a></li>
+
+
+
                 <li class="right"><a href=""><i class="fab fa-facebook-square"></i></a></li>
                 <li class="right"><a href=""><i class="fab fa-twitter-square"></i></a></li>
                 <li class="right"><a href=""><i class="fab fa-google-plus-square"></i></a></li>
                 <li class="right"><a href=""><i class="fab fa-instagram-square"></i></a></li>
+                <li class="right">
+                    <form onsubmit="return false">
+                        <label for="Travels">Sort:</label>
+                        <select id="travelSort" name="Adventures">
+                            <option id="price" value="price">Price</option>
+                            <option id="rate" value="rate">Rate</option>
+                        </select>
+                        <input id="submitBtn" type="submit">
+                    </form>
+
+
+                </li>
 
                 <li><a href="#">Our Tours</a>
                     <ul class="hidden">
-                        <li ><a class="city" href="#card-header">City</a></li>
-                        <li  > <a class="mountain" href="#card-header">Mountain</a></li>
-                        <li ><a class="beach" href="#card-header">Beach</a></li>
+                        <li><a class="city" href="#card-header">City</a></li>
+                        <li> <a class="mountain" href="#card-header">Mountain</a></li>
+                        <li><a class="beach" href="#card-header">Beach</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Gallery</a>
@@ -44,7 +59,13 @@
                 <li><a href="">Contact Us</a></li>
 
             </ul>
+
+
+
         </nav>
+
+
+
     </header>
     <div class="thumbnail">
         <div class="intro">
@@ -56,7 +77,7 @@
 
 
     <div class="introGallery">
-        <a  href="#card-header" class="city" id="firstImage">
+        <a href="#card-header" class="city" id="firstImage">
             <div class="ImageText">
                 <h2>City Tours</h2>
             </div>

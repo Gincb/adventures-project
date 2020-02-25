@@ -342,9 +342,19 @@ header li a {
     text-decoration: none;
 }
 
-header ul li.right a {
+header ul li.right a{
     float: right;
     min-width: 30px;
+}
+
+header ul li form.right{
+    float: right;
+     height: 50px;
+     line-height: 50px;
+    color: white;
+    margin-left: auto;
+    font-size: 20px;
+
 }
 
 
@@ -404,10 +414,6 @@ input[type=checkbox]:checked ~ #menu {
 label:hover {
     color: darkgray;
 }
-
-
-
-
 
 
 
