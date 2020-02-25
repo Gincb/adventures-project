@@ -22,35 +22,86 @@ function handleData(data) {
     const myData = data.feed.entry;
 
     const cityBtns = document.querySelectorAll(".city");
-        cityBtns.forEach(cityBtn =>{
-            cityBtn.addEventListener("click", filterContent);
+    cityBtns.forEach(cityBtn => {
+        cityBtn.addEventListener("click", filterContent);
 
     })
 
     const mountainBtns = document.querySelectorAll(".mountain");
-    mountainBtns.forEach(mountainBtn =>{
-            mountainBtn.addEventListener("click", filterContent);
+    mountainBtns.forEach(mountainBtn => {
+        mountainBtn.addEventListener("click", filterContent);
 
     })
 
 
-   const beachBtns = document.querySelectorAll(".beach");
-    beachBtns.forEach(beachBtn =>{
-            beachBtn.addEventListener("click", filterContent);
+    const beachBtns = document.querySelectorAll(".beach");
+    beachBtns.forEach(beachBtn => {
+        beachBtn.addEventListener("click", filterContent);
 
     })
 
 
-    myData.forEach(showData);
+        myData.forEach(showData);
 
     function filterContent(e) {
         console.log(e);
-        document.querySelector(".card-header").textContent = e.currentTarget.className;
-        
+        document.querySelector(".card-headline").textContent = e.currentTarget.className;
+
         let result = myData.filter(item => item.gsx$category.$t === e.currentTarget.className);
         document.querySelector(".container").innerHTML = "";
-            result.forEach(showData);
+        result.forEach(showData);
+    }
+
+    function sortList(sortType) {
+        //        console.log(myData)
+                document.querySelector(".card-headline").textContent = "HOT TOURS";
+
+        if (sortType === "price") {
+            myData.sort(function (a, b) {
+                return a.gsx$price.$t - b.gsx$price.$t;
+                console.log(a, b)
+            })
+            document.querySelector(".container").innerHTML = "";
+        document.querySelector(".card-subheadline").textContent = "Cheapest price first"
+
+            myData.forEach(showData);
+
+            console.log(myData)
+
+        } else if (sortType === "rate") {
+            myData.sort(function (a, b) {
+                return a.gsx$rating.$t - b.gsx$rating.$t;
+            })
+            document.querySelector(".container").innerHTML = "";
+                    document.querySelector(".card-subheadline").textContent = "Best rating first"
+
+            myData.reverse();
+            myData.forEach(showData);
+
+        } else {
+            document.querySelector(".container").innerHTML = "";
+
+            myData.forEach(showData);
+
         }
+
+    }
+
+    const submit = document.getElementById("submitBtn");
+
+
+    submit.addEventListener("click", select)
+
+    function select() {
+        const options = document.querySelectorAll("option");
+        options.forEach(option => {
+
+            if (option.selected) {
+                sortList(option.id)
+            }
+        })
+    }
+
 }
 
 function showData(singleRowData) {
