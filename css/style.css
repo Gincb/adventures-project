@@ -9,6 +9,31 @@ html{
 
 }
 
+.triangle {
+    fill: black;
+}
+
+#scroll {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.triangle:hover {
+    transition: 0.2s ease-in;
+    fill: rgb(61, 105, 105);
+}
+
 .star-icon {
     padding: 0 2px;
     margin: 0;
