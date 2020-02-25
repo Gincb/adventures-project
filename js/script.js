@@ -40,9 +40,9 @@ function handleData(data) {
 
     function filterContent(e) {
         console.log(e);
-        document.querySelector(".card-header").textContent = e.target.className;
+        document.querySelector(".card-header").textContent = e.currentTarget.className;
         
-        let result = myData.filter(item => item.gsx$category.$t === e.target.className);
+        let result = myData.filter(item => item.gsx$category.$t === e.currentTarget.className);
         document.querySelector(".container").innerHTML = "";
             result.forEach(showData);
         }

@@ -28,6 +28,7 @@ article h1 {
     margin: auto;
     text-align: center;
     letter-spacing: 8px;
+    text-transform: uppercase;
 }
 
 .container {
