@@ -1,6 +1,11 @@
 const link = "https://spreadsheets.google.com/feeds/list/1SQeili57IfygzYF7DD56KJAniwXYIeGCbWZdphcn0Ds/od6/public/values?alt=json";
 window.addEventListener("DOMContentLoaded", getData);
 
+const modal = document.querySelector(".modal-background");
+modal.addEventListener("click", () => {
+  modal.classList.add("hide");
+});
+
 /***** filter section *****/
 
 
@@ -75,6 +80,29 @@ function showData(singleRowData) {
         myClone.querySelector(".rating").innerHTML = `<i class="fas fa-star star-icon"></i>`
     }
 
+    myClone.querySelector(".card-button").addEventListener("click", showModal);
+
+    function showModal() {
+        console.log(singleRowData);
+        modal.querySelector(".modal-name").textContent = `${singleRowData.gsx$name.$t}, ${singleRowData.gsx$location.$t}`;
+        modal.querySelector(".modal-description").textContent = singleRowData.gsx$fulldescription.$t;
+        modal.querySelector(".modal-image").style.backgroundImage = `url(${singleRowData.gsx$imageurl.$t})`;
+        modal.querySelector(".modal-price span").textContent = singleRowData.gsx$price.$t;
+
+        if (singleRowData.gsx$rating.$t == 5) {
+            modal.querySelector(".modal-rating").innerHTML = `<i class="fas fa-star star-icon"></i><i class="fas fa-star star-icon"></i><i class="fas fa-star star-icon"></i><i class="fas fa-star star-icon"></i><i class="fas fa-star star-icon"></i>`;
+        } else if (singleRowData.gsx$rating.$t == 4) {
+            modal.querySelector(".modal-rating").innerHTML = `<i class="fas fa-star star-icon"></i><i class="fas fa-star star-icon"></i><i class="fas fa-star star-icon"></i><i class="fas fa-star star-icon"></i>`;
+        } else if (singleRowData.gsx$rating.$t == 3) {
+            modal.querySelector(".modal-rating").innerHTML = `<i class="fas fa-star star-icon"></i><i class="fas fa-star star-icon"></i><i class="fas fa-star star-icon"></i>`
+        } else if (singleRowData.gsx$rating.$t == 2) {
+            modal.querySelector(".modal-rating").innerHTML = `<i class="fas fa-star star-icon"></i><i class="fas fa-star star-icon"></i>`
+        } else {
+            modal.querySelector(".modal-rating").innerHTML = `<i class="fas fa-star star-icon"></i>`
+        }
+
+        modal.classList.remove("hide");
+    }
 
     const place = document.querySelector(".container");
     place.appendChild(myClone);
