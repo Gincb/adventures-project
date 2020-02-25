@@ -29,13 +29,16 @@
                 <li class="right"><a href=""><i class="fab fa-google-plus-square"></i></a></li>
                 <li class="right"><a href=""><i class="fab fa-instagram-square"></i></a></li>
                 <li class="right">
-                    <form onsubmit="return false">
+                    <form class="sort-from" onsubmit="return false">
                         <label for="Travels">Sort by:</label>
                         <select id="travelSort" name="Adventures">
                             <option id="price" value="price">Price</option>
                             <option id="rate" value="rate">Rate</option>
                         </select>
-                        <input id="submitBtn" type="submit">
+
+                        <button id="submitBtn" type="submit" class="sort-button"><a href="#card-header">Apply</a></button>
+
+
                     </form>
 
 
@@ -93,8 +96,11 @@
             </div>
         </a>
     </div>
+    <div class="card-header" id="card-header">
+        <h1 class="card-headline">Hot Tours</h1>
+        <span class="card-subheadline"></span>
+    </div>
 
-    <h1 class="card-header" id="card-header">Hot Tours</h1>
     <article class="container">
 
     </article>
@@ -201,4 +207,6 @@
     </footer>
 
     <script src="js/script.js"></script>
-</body></html>
+</body>
+
+</html>

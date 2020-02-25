@@ -21,14 +21,25 @@ article h1 {
 }
 
 .card-header {
-    padding-bottom: 2em;
-    padding-top: 3em;
+    margin-bottom: 6em;
+    padding-top: 6em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.card-headline{
+
     font-size: 2em;
-    line-height: 1.2;
     margin: auto;
     text-align: center;
     letter-spacing: 8px;
     text-transform: uppercase;
+}
+.card-subheadline{
+        margin-top: 1em;
+
+    text-align: center;
+    font-style: italic;
 }
 
 .container {
@@ -308,8 +319,9 @@ header ul {
 header ul li {
     display: inline-block;
     float: left;
-    /*    margin-right: 1px;*/
     background-color: darkslategray;
+    text-transform: uppercase;
+    font-weight: 500;
 }
 
 header ul li.right {
@@ -317,19 +329,40 @@ header ul li.right {
 }
 
 header ul li a:hover:not(.active) {
-    background-color: #3f6868;
-    color: black;
+        color: #60a1d6;
 }
 
 
 header ul li a.active {
-    background-color: #487575;
-    color: white;
+            color: #60a1d6;
+
 
 }
 
 
+.sort-button{
+    height: 20px;
 
+}
+.sort-button a{
+    color: black;
+    background: none;
+    height: auto;
+    line-height: normal;
+
+
+}
+#travelort{
+        height: 20px;
+    margin-top: 20px;
+
+}
+
+.sort-button a:hover{
+    color: black;
+    background: none;
+
+}
 
 header li a {
     display: block;
@@ -348,11 +381,16 @@ header ul li.right a{
 }
 
 header ul li.right form{
-    height: 40px;
+  height: 40px;
     color: white;
-    margin-top: 0.5em;
+    margin-top: 5px;
     text-align: center;
     font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 225px;
+
 
 }
 
@@ -366,7 +404,7 @@ header li:hover ul li a {
 }
 
 header li:hover ul li a:hover {
-    color: black;
+            color: #60a1d6;
 }
 
 header li ul {
