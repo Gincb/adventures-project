@@ -347,12 +347,11 @@ header ul li.right a{
     min-width: 30px;
 }
 
-header ul li form.right{
-    float: right;
-     height: 50px;
-     line-height: 50px;
+header ul li.right form{
+    height: 40px;
     color: white;
-    margin-left: auto;
+    margin-top: 0.5em;
+    text-align: center;
     font-size: 20px;
 
 }
