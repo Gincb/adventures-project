@@ -357,6 +357,7 @@ header ul li.right form{
 }
 
 
+
 header li:hover ul li a {
     min-width: 130px;
     height: 40px;
@@ -411,7 +412,7 @@ input[type=checkbox]:checked ~ #menu {
 }
 
 label:hover {
-    color: darkgray;
+    color: white;
 }
 
 
