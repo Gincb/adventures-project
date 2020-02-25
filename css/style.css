@@ -4,6 +4,10 @@ body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
 }
+html{
+       scroll-behavior: smooth;
+
+}
 
 .star-icon {
     padding: 0 2px;
@@ -11,7 +15,8 @@ body {
     font-size: 1em;
     color: rgb(255, 217, 0);
 }
-article h1{
+
+article h1 {
     margin: 100px;
 }
 
@@ -73,7 +78,7 @@ article h1{
     border: 2px solid #2c2c2c;
     background-color: white;
     background-image: linear-gradient(#2f4f4f, #2f4f4f);
-/*    background-position: 50% 50%;*/
+    /*    background-position: 50% 50%;*/
     background-repeat: no-repeat;
     background-size: 0% 100%;
     transition: background-size .5s, color .5s;
@@ -139,8 +144,9 @@ article h1{
     padding-top: 50px;
 
 }
-.team .member-box span p{
-  color: #60a1d6;
+
+.team .member-box span p {
+    color: #60a1d6;
     font-weight: 500;
 
 }
@@ -150,31 +156,34 @@ article h1{
     z-index: 100;
     margin-bottom: -50px;
     margin-left: 18%;
-     height: 13vw;
+    height: 13vw;
     width: 13vw;
     border-radius: 50%;
     border: 12px white solid;
 
 }
-.team  .nitzan {
-  background-image: url("../media/nitzan.JPG");
-      background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 
-}
-.team  .daniel {
-  background-image: url("../media/daniel.jpg");
-      background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-}
-.team  .gintare {
-  background-image: url("https://scontent-cph2-1.xx.fbcdn.net/v/t31.0-8/s960x960/12898206_1400246426669214_8028756538378271773_o.jpg?_nc_cat=105&_nc_ohc=WfkazL2BptAAX-vZ8lf&_nc_ht=scontent-cph2-1.xx&_nc_tp=7&oh=a1fc80ba0c8fd74c4531c107d7d85eef&oe=5EB90864");
+.team .nitzan {
+    background-image: url("../media/nitzan.JPG");
     background-size: cover;
-        background-position: 100% 20% ;
-        background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.team .daniel {
+    background-image: url("../media/daniel.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.team .gintare {
+    background-image: url("https://scontent-cph2-1.xx.fbcdn.net/v/t31.0-8/s960x960/12898206_1400246426669214_8028756538378271773_o.jpg?_nc_cat=105&_nc_ohc=WfkazL2BptAAX-vZ8lf&_nc_ht=scontent-cph2-1.xx&_nc_tp=7&oh=a1fc80ba0c8fd74c4531c107d7d85eef&oe=5EB90864");
+    background-size: cover;
+    background-position: 100% 20%;
+    background-repeat: no-repeat;
 
 
 
@@ -233,23 +242,26 @@ footer a {
     margin-top: 0;
     transition: .3s;
 }
-footer a:hover{
+
+footer a:hover {
     color: #60a1d6;
 }
 
 footer .news ul li {
     flex-flow: column;
     align-items: baseline;
-        transition: .3s;
+    transition: .3s;
 
 
 }
+
 footer .news ul li:hover {
 
     color: #60a1d6;
 
 
 }
+
 footer .links {
     margin-left: 40px;
 }
@@ -258,12 +270,14 @@ footer .news,
 .contact {
     width: 40%;
 }
-footer .news li span{
+
+footer .news li span {
     color: #60a1d6;
     font-style: italic;
 }
-footer .news li{
-   cursor: pointer;
+
+footer .news li {
+    cursor: pointer;
 }
 
 footer h3 {
@@ -439,62 +453,57 @@ label:hover {
 
 
 /*introGallery with three pictures on top*/
-.introGallery{
+.introGallery {
 
-    display:flex;
-/*    min-width: 100vw;*/
+    display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
-    margin-top: -2em;
+    justify-content: center;
+    margin-top: -4em;
     flex-flow: row;
 }
 
-.firstImage {
-    position: relative;
-    background-image: url("https://image.jimcdn.com/app/cms/image/transf/none/path/sa6549607c78f5c11/image/i44ded034dcffa32d/version/1548338391/florence-tourism-italy-best-destinations-in-europe.jpg");
+#firstImage,
+#secondImage,
+#thirdImage {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
-   height: 50vh;
-/*    filter: saturate(40%);*/
-    min-width: 20vw;
+    height: 55vh;
+    min-width: 22vw;
+    position: relative;
+    margin: 0 30px;
+    cursor: pointer;
+        transition: transform ease-out 0.3s;
+
+
+}
+
+#firstImage {
+    background-image: url("https://image.jimcdn.com/app/cms/image/transf/none/path/sa6549607c78f5c11/image/i44ded034dcffa32d/version/1548338391/florence-tourism-italy-best-destinations-in-europe.jpg");
+
 }
 
 
-.secondImage {
-    position: relative;
+#secondImage {
     background-image: url("https://images.unsplash.com/photo-1523866098101-26d61edaae51?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: right;
-    height: 50vh;
-/*    filter: saturate(40%);*/
-    min-width: 20vw;
+
 }
 
-.thirdImage {
-    position: relative;
+#thirdImage {
     background-image: url("https://images.unsplash.com/photo-1505957809694-3e65d3c204b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-   height: 50vh;
-/*    filter: saturate(40%);*/
-     min-width: 20vw;
+
 }
 
 .ImageText {
     position: absolute;
     padding: 1em;
     bottom: 1em;
-/*    left: 1em;*/
     color: #fff;
     text-align: center;
 }
 
-.introGallery div:hover{
-    transition: transform ease-out 0.3s;
+.introGallery>a:hover {
     transform: scale(1.02)
 }
 
@@ -573,28 +582,33 @@ label:hover {
     }
 
     footer ul {
-    justify-content: space-between;
-    flex-flow: column;
-    height: 150px;
+        justify-content: space-between;
+        flex-flow: column;
+        height: 150px;
     }
+
     footer .footer-container {
-    flex-flow: column;
+        flex-flow: column;
 
     }
-    footer .news,.contact{
-    width: auto;
+
+    footer .news,
+    .contact {
+        width: auto;
     }
 
-    .introGallery{
-    flex-flow: column;
-    justify-content: center;
+    .introGallery {
+        flex-flow: column;
+        justify-content: center;
         align-items: center;
-         margin-top: 1em;
+        margin-top: 1em;
 
 
     }
 
-    .firstImage, .secondImage, .thirdImage {
+    #firstImage,
+    #secondImage,
+    #thirdImage {
         margin: 1em;
         width: 70vw;
     }

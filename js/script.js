@@ -16,23 +16,33 @@ function getData() {
 function handleData(data) {
     const myData = data.feed.entry;
 
-    const cityBtn = document.getElementById("City(sightseeing)");
-    cityBtn.addEventListener("click", filterContent);
-    
-    const mountainBtn = document.getElementById("mountain");
-    mountainBtn.addEventListener("click", filterContent);
+    const cityBtns = document.querySelectorAll(".city");
+        cityBtns.forEach(cityBtn =>{
+            cityBtn.addEventListener("click", filterContent);
+
+    })
+
+    const mountainBtns = document.querySelectorAll(".mountain");
+    mountainBtns.forEach(mountainBtn =>{
+            mountainBtn.addEventListener("click", filterContent);
+
+    })
 
 
-    const beachBtn = document.getElementById("beach");
-    beachBtn.addEventListener("click", filterContent);
+   const beachBtns = document.querySelectorAll(".beach");
+    beachBtns.forEach(beachBtn =>{
+            beachBtn.addEventListener("click", filterContent);
+
+    })
+
 
     myData.forEach(showData);
 
     function filterContent(e) {
-        document.querySelector(".card-header").textContent = e.currentTarget.querySelector("h2").textContent;
+        console.log(e);
+        document.querySelector(".card-header").textContent = e.target.className;
         
-        let result = myData.filter(item => item.gsx$category.$t === e.currentTarget.id);
-       // console.log(result, "res array")
+        let result = myData.filter(item => item.gsx$category.$t === e.target.className);
         document.querySelector(".container").innerHTML = "";
             result.forEach(showData);
         }
