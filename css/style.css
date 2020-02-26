@@ -184,7 +184,7 @@ article h1 {
 
 /************ team **********/
 
-.team h1 {
+.team h1, .about h1 {
     padding-bottom: 1em;
     padding-top: 2.5em;
     font-size: 2em;
@@ -200,6 +200,17 @@ article h1 {
     justify-content: center;
     align-content: stretch;
     flex-flow: row;
+}
+
+.about-container {
+    padding: 3em;
+    margin: 0 12em;
+    background-color: #e2e2e25e;
+}
+
+.about-container p {
+    text-align: center;
+    font-style: italic;
 }
 
 .team .member-card {
@@ -746,6 +757,10 @@ img {vertical-align: middle;}
 
         flex-flow: column;
         align-items: center;
+    }
+
+    .about-container {
+        margin: 2em;
     }
 
     .team .member-box {
