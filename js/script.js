@@ -49,7 +49,7 @@ function handleData(data) {
 
         let result = myData.filter(item => item.gsx$category.$t === e.currentTarget.className);
         document.querySelector(".container").innerHTML = "";
-        result.forEach(showData);
+        result.forEach(showData);slode
     }
 
     function sortList(sortType) {
@@ -174,4 +174,27 @@ function scrollDisplay() {
 function scrollToTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
+}
+
+
+/******* slide show ******/
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 4000); // Change image every 2 seconds
 }
