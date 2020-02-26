@@ -160,6 +160,8 @@ function showData(singleRowData) {
 
 }
 
+/*** scroll to top button */
+
 scroll = document.getElementById("scroll");
 window.onscroll = function() { scrollDisplay() };
 
@@ -174,6 +176,21 @@ function scrollDisplay() {
 function scrollToTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
+}
+
+/*** scroll about */
+
+const aboutBtn1 = document.querySelector(".intro-button1");
+const aboutBtn2 = document.querySelector(".intro-button2");
+const aboutBtn3 = document.querySelector(".intro-button3");
+const about = document.querySelector("#about");
+
+aboutBtn1.addEventListener("click", scrollToAbout);
+aboutBtn2.addEventListener("click", scrollToAbout);
+aboutBtn3.addEventListener("click", scrollToAbout);
+
+function scrollToAbout() {
+    about.scrollIntoView();
 }
 
 

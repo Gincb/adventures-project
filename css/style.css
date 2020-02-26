@@ -619,7 +619,7 @@ img {vertical-align: middle;}
 
 .intro {
     position: absolute;
-    padding: 1em;
+    padding: 4em 0 0 2em;
     top: 0;
     left: 1em;
     color: #fff;
@@ -639,6 +639,7 @@ img {vertical-align: middle;}
     background-repeat: no-repeat;
     background-size: 0% 100%;
     transition: background-size .5s, color .5s;
+    z-index: 1000;
 }
 
 .intro-button:hover {
@@ -760,7 +761,8 @@ img {vertical-align: middle;}
     }
 
     .about-container {
-        margin: 2em;
+        margin: 1em;
+        padding: 1em;
     }
 
     .team .member-box {
