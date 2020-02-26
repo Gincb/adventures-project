@@ -178,19 +178,33 @@ function scrollToTop() {
     document.documentElement.scrollTop = 0;
 }
 
-/*** scroll about */
+/*** scrolling */
 
 const aboutBtn1 = document.querySelector(".intro-button1");
 const aboutBtn2 = document.querySelector(".intro-button2");
 const aboutBtn3 = document.querySelector(".intro-button3");
-const about = document.querySelector("#about");
+const aboutBtn4 = document.querySelector(".footer-about");
+const teamBtn = document.querySelector(".footer-team");
+const toursBtn = document.querySelector(".footer-tours");
+const aboutS = document.querySelector("#about");
+const teamS = document.querySelector("#team");
+const toursS = document.querySelector(".introGallery");
 
 aboutBtn1.addEventListener("click", scrollToAbout);
 aboutBtn2.addEventListener("click", scrollToAbout);
 aboutBtn3.addEventListener("click", scrollToAbout);
+aboutBtn4.addEventListener("click", scrollToAbout);
+teamBtn.addEventListener("click", scrollToTeam);
+toursBtn.addEventListener("click", scrollToTours);
 
 function scrollToAbout() {
-    about.scrollIntoView();
+    aboutS.scrollIntoView();
+}
+function scrollToTeam() {
+    teamS.scrollIntoView();
+}
+function scrollToTours() {
+    toursS.scrollIntoView();
 }
 
 
