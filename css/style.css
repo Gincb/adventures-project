@@ -4,9 +4,9 @@ body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
 }
-html{
-       scroll-behavior: smooth;
 
+html {
+    scroll-behavior: smooth;
 }
 
 .triangle {
@@ -52,7 +52,8 @@ article h1 {
     justify-content: center;
     flex-direction: column;
 }
-.card-headline{
+
+.card-headline {
 
     font-size: 2em;
     margin: auto;
@@ -60,8 +61,9 @@ article h1 {
     letter-spacing: 8px;
     text-transform: uppercase;
 }
-.card-subheadline{
-        margin-top: 1em;
+
+.card-subheadline {
+    margin-top: 1em;
 
     text-align: center;
     font-style: italic;
@@ -149,7 +151,7 @@ article h1 {
 }
 
 .modal-background {
-    position: fixed;    
+    position: fixed;
     z-index: 200;
     left: 0;
     top: 0;
@@ -184,7 +186,8 @@ article h1 {
 
 /************ team **********/
 
-.team h1, .about h1 {
+.team h1,
+.about h1 {
     padding-bottom: 1em;
     padding-top: 2.5em;
     font-size: 2em;
@@ -406,22 +409,23 @@ header ul li.right {
 }
 
 header ul li a:hover:not(.active) {
-        color: #60a1d6;
+    color: #60a1d6;
 }
 
 
 header ul li a.active {
-            color: #60a1d6;
+    color: #60a1d6;
 
 
 }
 
 
-.sort-button{
+.sort-button {
     height: 20px;
 
 }
-.sort-button a{
+
+.sort-button a {
     color: black;
     background: none;
     height: auto;
@@ -429,13 +433,14 @@ header ul li a.active {
 
 
 }
-#travelort{
-        height: 20px;
+
+#travelort {
+    height: 20px;
     margin-top: 20px;
 
 }
 
-.sort-button a:hover{
+.sort-button a:hover {
     color: black;
     background: none;
 
@@ -452,13 +457,13 @@ header li a {
     text-decoration: none;
 }
 
-header ul li.right a{
+header ul li.right a {
     float: right;
     min-width: 30px;
 }
 
-header ul li.right form{
-  height: 40px;
+header ul li.right form {
+    height: 40px;
     color: white;
     margin-top: 5px;
     text-align: center;
@@ -481,7 +486,7 @@ header li:hover ul li a {
 }
 
 header li:hover ul li a:hover {
-            color: #60a1d6;
+    color: #60a1d6;
 }
 
 header li ul {
@@ -548,28 +553,37 @@ label:hover {
 
 /******* slide show ******/
 
-.mySlides {display: none;}
-img {vertical-align: middle;}
-.slide-img1{
+.mySlides {
+    display: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.slide-img1 {
     background-image: url("https://cdn.theculturetrip.com/wp-content/uploads/2016/08/146844-2.jpg");
     background-position: center top;
 
 }
-.slide-img2{
+
+.slide-img2 {
     background-image: url("https://greenglobaltravel.com/wp-content/uploads/2017/03/Screen-Shot-2017-03-02-at-4.35.38-PM-e1533904994884.png");
-        background-position: center 20%;
+    background-position: center 20%;
 
 }
-.slide-img3{
+
+.slide-img3 {
     background-image: url("https://www.fenicehotels.com/files-sbbasic/sr_fenicehotels_com/fenice_des_artistes_venice.jpg?w=1900");
-        background-position: center 70%;
+    background-position: center 70%;
 
 }
+
 /* Slideshow container */
 .slideshow-container {
     top: 50px;
-  position: relative;
-  margin: auto;
+    position: relative;
+    margin: auto;
     background: black;
     min-height: 60vh;
 }
@@ -581,20 +595,30 @@ img {vertical-align: middle;}
 
 /* Fading animation */
 .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 2s;
-  animation-name: fade;
-  animation-duration: 2s;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    animation-name: fade;
+    animation-duration: 2s;
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
 
@@ -651,7 +675,7 @@ img {vertical-align: middle;}
     position: relative;
     margin: 0 30px;
     cursor: pointer;
-        transition: transform ease-out 0.3s;
+    transition: transform ease-out 0.3s;
 
 
 }
@@ -680,7 +704,7 @@ img {vertical-align: middle;}
     text-align: center;
 }
 
-.introGallery>a:hover {
+.introGallery > a:hover {
     transform: scale(1.02)
 }
 

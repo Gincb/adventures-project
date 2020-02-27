@@ -1,12 +1,22 @@
+/***** spreadsheets from google *****/
+
+//
+//https://docs.google.com/spreadsheets/d/1SQeili57IfygzYF7DD56KJAniwXYIeGCbWZdphcn0Ds/edit?ts=5e4fb156#gid=0
+
+
+/***** Get Data from google sheets *****/
+
 const link = "https://spreadsheets.google.com/feeds/list/1SQeili57IfygzYF7DD56KJAniwXYIeGCbWZdphcn0Ds/od6/public/values?alt=json";
 window.addEventListener("DOMContentLoaded", getData);
+
+/***** modal *****/
 
 const modal = document.querySelector(".modal-background");
 modal.addEventListener("click", () => {
   modal.classList.add("hide");
 });
 
-/***** filter section *****/
+/***** fetch Data *****/
 
 
 function getData() {
@@ -17,6 +27,8 @@ function getData() {
         .then(handleData);
 
 }
+
+/***** filter section *****/
 
 function handleData(data) {
     const myData = data.feed.entry;
@@ -41,7 +53,11 @@ function handleData(data) {
     })
 
 
+    /***** showing all cards part content *****/
+
         myData.forEach(showData);
+
+    /***** filter function *****/
 
     function filterContent(e) {
         console.log(e);
@@ -51,6 +67,8 @@ function handleData(data) {
         document.querySelector(".container").innerHTML = "";
         result.forEach(showData);
     }
+
+   /***** sorting section based on price and rate *****/
 
     function sortList(sortType) {
         //        console.log(myData)
@@ -104,6 +122,8 @@ function handleData(data) {
 
 }
 
+/***** showing data in to the template *****/
+
 function showData(singleRowData) {
 
     const template = document.querySelector("template").content;
@@ -119,6 +139,8 @@ function showData(singleRowData) {
     myClone.querySelector(".card-description").textContent =
         singleRowData.gsx$shortdescription.$t;
 
+
+   /***** stars rating part *****/
     if (singleRowData.gsx$rating.$t == 5) {
         myClone.querySelector(".rating").innerHTML = `<i class="fas fa-star star-icon"></i><i class="fas fa-star star-icon"></i><i class="fas fa-star star-icon"></i><i class="fas fa-star star-icon"></i><i class="fas fa-star star-icon"></i>`;
     } else if (singleRowData.gsx$rating.$t == 4) {
@@ -131,6 +153,7 @@ function showData(singleRowData) {
         myClone.querySelector(".rating").innerHTML = `<i class="fas fa-star star-icon"></i>`
     }
 
+    /***** Modal *****/
     myClone.querySelector(".card-button").addEventListener("click", showModal);
 
     function showModal() {
