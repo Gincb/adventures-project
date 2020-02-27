@@ -49,7 +49,7 @@ function handleData(data) {
 
         let result = myData.filter(item => item.gsx$category.$t === e.currentTarget.className);
         document.querySelector(".container").innerHTML = "";
-        result.forEach(showData);slode
+        result.forEach(showData);
     }
 
     function sortList(sortType) {
