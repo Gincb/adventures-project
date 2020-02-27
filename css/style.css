@@ -150,7 +150,7 @@ article h1 {
 
 .modal-background {
     position: fixed;    
-    z-index: 101;
+    z-index: 200;
     left: 0;
     top: 0;
     width: 100%;
@@ -378,7 +378,7 @@ footer h3 {
 .top-nav {
     background-color: darkslategray;
     position: fixed;
-    z-index: 2000;
+    z-index: 150;
     width: 100%;
 }
 
