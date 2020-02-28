@@ -435,7 +435,7 @@ header ul li a.active {
     background: none;
     height: auto;
     line-height: normal;
-
+    text-decoration: none;
 
 }
 
