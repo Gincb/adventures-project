@@ -26,18 +26,7 @@
                 <li class="right"><a href=""><i class="fab fa-google-plus-square"></i></a></li>
                 <li class="right"><a href=""><i class="fab fa-instagram-square"></i></a></li>
 
-                <li class="right">
-                    <form class="sort-from" onsubmit="return false">
-                        <label for="Travels">Sort by:</label>
-                        <select id="travelSort" name="Adventures">
-                            <option id="price" value="price">Price</option>
-                            <option id="rate" value="rate">Rate</option>
-                        </select>
 
-                        <button id="submitBtn" type="submit" class="sort-button"><a href="#card-header">Apply</a></button>
-
-                    </form>
-                </li>
 
 
                 <li><a href="#card-header">Our Tours</a>
@@ -117,6 +106,16 @@
 
     <div class="card-header" id="card-header">
         <h1 class="card-headline">Hot Tours</h1>
+          <form class="sort-from" onsubmit="return false">
+                        <label for="Travels">Sort by:</label>
+                        <select id="travelSort" name="Adventures">
+                            <option id="price" value="price">Price</option>
+                            <option id="rate" value="rate">Rate</option>
+                        </select>
+
+                        <button id="submitBtn" type="submit" class="sort-button"><a href="#card-header">Apply</a></button>
+
+                    </form>
         <span class="card-subheadline"></span>
     </div>
 

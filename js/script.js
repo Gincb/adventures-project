@@ -12,8 +12,10 @@ window.addEventListener("DOMContentLoaded", getData);
 /***** modal *****/
 
 const modal = document.querySelector(".modal-background");
+const options = document.querySelectorAll("option");
+
 modal.addEventListener("click", () => {
-  modal.classList.add("hide");
+    modal.classList.add("hide");
 });
 
 /***** fetch Data *****/
@@ -55,49 +57,81 @@ function handleData(data) {
 
     /***** showing all cards part content *****/
 
-        myData.forEach(showData);
+    myData.forEach(showData);
 
     /***** filter function *****/
 
-    function filterContent(e) {
-        console.log(e);
-        document.querySelector(".card-headline").textContent = e.currentTarget.className;
+    let result = [];
 
-        let result = myData.filter(item => item.gsx$category.$t === e.currentTarget.className);
-        document.querySelector(".container").innerHTML = "";
-        result.forEach(showData);
+    function filterContent(e) {
+
+
+        console.log(e.currentTarget.className);
+
+        options.forEach(item => {
+            if (item.selected) {
+                document.querySelector(".card-headline").textContent = e.currentTarget.className;
+
+                result = myData.filter(item => item.gsx$category.$t === e.currentTarget.className);
+                document.querySelector(".container").innerHTML = "";
+                console.log('selected option', item.id)
+
+                sortList(item.id);
+                result.forEach(showData);
+
+
+            }
+
+        })
     }
 
-   /***** sorting section based on price and rate *****/
+    /***** sorting section based on price and rate *****/
 
     function sortList(sortType) {
-        //        console.log(myData)
-                document.querySelector(".card-headline").textContent = "HOT TOURS";
+        console.log("result", result);
 
-        if (sortType === "price") {
+
+
+        if (result.length > 1 & sortType === "rate") {
+            document.querySelector(".card-headline").textContent = result[0].gsx$category.$t;
+            result.sort(function (a, b) {
+                return a.gsx$rating.$t - b.gsx$rating.$t;
+            })
+            document.querySelector(".container").innerHTML = "";
+            document.querySelector(".card-subheadline").textContent = "Best rating first"
+
+            result.reverse();
+            result.forEach(showData);
+        } else if (result.length > 1 & sortType === "price") {
+            document.querySelector(".card-headline").textContent = result[0].gsx$category.$t;
+            result.sort(function (a, b) {
+                return a.gsx$price.$t - b.gsx$price.$t;
+                console.log(a, b)
+            })
+            document.querySelector(".container").innerHTML = "";
+            document.querySelector(".card-subheadline").textContent = "Cheapest price first"
+
+            result.forEach(showData);
+        } else if (result.length < 1 & sortType === "rate") {
+            myData.sort(function (a, b) {
+                return a.gsx$rating.$t - b.gsx$rating.$t;
+            })
+            document.querySelector(".container").innerHTML = "";
+            document.querySelector(".card-subheadline").textContent = "Best rating first";
+            document.querySelector(".card-headline").textContent = "Hot Tours";
+
+
+            myData.reverse();
+            myData.forEach(showData);
+
+        } else if (result.length < 1 & sortType === "price") {
             myData.sort(function (a, b) {
                 return a.gsx$price.$t - b.gsx$price.$t;
                 console.log(a, b)
             })
             document.querySelector(".container").innerHTML = "";
-        document.querySelector(".card-subheadline").textContent = "Cheapest price first"
-
-            myData.forEach(showData);
-
-            console.log(myData)
-
-        } else if (sortType === "rate") {
-            myData.sort(function (a, b) {
-                return a.gsx$rating.$t - b.gsx$rating.$t;
-            })
-            document.querySelector(".container").innerHTML = "";
-                    document.querySelector(".card-subheadline").textContent = "Best rating first"
-
-            myData.reverse();
-            myData.forEach(showData);
-
-        } else {
-            document.querySelector(".container").innerHTML = "";
+            document.querySelector(".card-subheadline").textContent = "Cheapest price first"
+            document.querySelector(".card-headline").textContent = "Hot Tours";
 
             myData.forEach(showData);
 
@@ -111,7 +145,6 @@ function handleData(data) {
     submit.addEventListener("click", select)
 
     function select() {
-        const options = document.querySelectorAll("option");
         options.forEach(option => {
 
             if (option.selected) {
@@ -140,7 +173,7 @@ function showData(singleRowData) {
         singleRowData.gsx$shortdescription.$t;
 
 
-   /***** stars rating part *****/
+    /***** stars rating part *****/
     if (singleRowData.gsx$rating.$t == 5) {
         myClone.querySelector(".rating").innerHTML = `<i class="fas fa-star star-icon"></i><i class="fas fa-star star-icon"></i><i class="fas fa-star star-icon"></i><i class="fas fa-star star-icon"></i><i class="fas fa-star star-icon"></i>`;
     } else if (singleRowData.gsx$rating.$t == 4) {
@@ -186,7 +219,9 @@ function showData(singleRowData) {
 /*** scroll to top button */
 
 scroll = document.getElementById("scroll");
-window.onscroll = function() { scrollDisplay() };
+window.onscroll = function () {
+    scrollDisplay()
+};
 
 function scrollDisplay() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -223,9 +258,11 @@ toursBtn.addEventListener("click", scrollToTours);
 function scrollToAbout() {
     aboutS.scrollIntoView();
 }
+
 function scrollToTeam() {
     teamS.scrollIntoView();
 }
+
 function scrollToTours() {
     toursS.scrollIntoView();
 }
@@ -237,14 +274,16 @@ let slideIndex = 0;
 showSlides();
 
 function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-//
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 4000); // Change image every 2 seconds
-}
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1
+    }
+    //
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 4000); // Change image every 2 seconds
+};

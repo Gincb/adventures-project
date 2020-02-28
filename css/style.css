@@ -46,17 +46,17 @@ article h1 {
 }
 
 .card-header {
-    margin-bottom: 6em;
-    padding-top: 6em;
+    margin-bottom: 4em;
+    padding-top: 10em;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
 }
 
 .card-headline {
-
     font-size: 2em;
-    margin: auto;
+/*    margin: auto;*/
     text-align: center;
     letter-spacing: 8px;
     text-transform: uppercase;
@@ -419,7 +419,11 @@ header ul li a.active {
 
 }
 
+.sort-form{
+    float: left;
+    padding-right: 50px;
 
+}
 .sort-button {
     height: 20px;
 
