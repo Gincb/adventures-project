@@ -46,8 +46,8 @@ article h1 {
 }
 
 .card-header {
-    margin-bottom: 4em;
-    padding-top: 10em;
+    margin-bottom: 3em;
+    padding-top: 6em;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -536,7 +536,7 @@ input[type=checkbox]:checked ~ #menu {
     transition: color 1s;
 }
 
-label:hover {
+header label:hover {
     color: white;
 }
 
